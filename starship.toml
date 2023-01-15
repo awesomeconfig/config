@@ -1,11 +1,11 @@
 format = """
-[](bold blue)  $username(#90dbeb) [in](white) $directory[ ](bold blue) [on master  ](bold purple)  [vim](white) [ 3.11](#c4ca86) [](bold white) [ in](white) [Fish ](bold red)  $time
+[ ](bold blue)  $username(#90dbeb) [in](white) $directory[ ](bold blue) [on master  ](bold purple)  [vim](white) [ 3.11](#c4ca86) [](bold white)  [ 19.0.1](yellow) [747 ](red) [ in](white) [Fish ](bold red)  $time
 $character
 """
 [character]
-success_symbol = "[ ~ ](bold green)"
-error_symbol = "[ ~ ](bold red)"
-vimcmd_symbol = "[](bold green)"
+success_symbol = "[   ](bold green)"
+error_symbol = "[    ](bold red)"
+vimcmd_symbol = "[   ](bold green)"
 
 [time]
 disabled = false
@@ -23,6 +23,12 @@ show_always = true
 format = '[$user ]($style)'
 disabled = false
 
+[directory.substitutions]
+"Documents" = " "
+"Downloads" = " "
+"Music" = " "
+"Pictures" = " "
+".minecraft" = "  "
 
 [os]
 disabled = false
@@ -70,10 +76,12 @@ symbol = " "
 symbol = "⌘ "
 
 [hg_branch]
-symbol = " "
+symbol = "  "
 
 [java]
 symbol = " "
+style = "bg:#86BBD8"
+format = '[ $symbol ($version) ]($style)'
 
 [julia]
 symbol = " "
